@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
+const goods = async() => {
+  const list_of_goods = await fetch(`https://614df672e3cf1f001712d464.mockapi.io/api/data/goods`)
+  .then(res => console.log(res));
+  return list_of_goods
+}
+goods()
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
     </div>
   );
 }
